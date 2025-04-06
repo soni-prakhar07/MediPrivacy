@@ -285,10 +285,10 @@ export default function Home() {
               <div className="w-full max-w-[300px]">
                 <blockquote className="text-[17px] text-[#787878] leading-[1.2] relative">
                   <span className="text-[#1CB5BD] text-[40px] absolute -left-4 -top-2">
-                    "
+                    &quot;
                   </span>
                   A trusted assistance companion for your health needs.
-                  <span className="text-[#1CB5BD] text-[40px]">"</span>
+                  <span className="text-[#1CB5BD] text-[40px]">&quot;</span>
                 </blockquote>
               </div>
             </div>

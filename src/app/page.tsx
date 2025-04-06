@@ -302,7 +302,7 @@ export default function Home() {
           <p className="text-4xl text-nowrap font-bold">Our Vision</p>
           <p className="text-base ml-10 text-wrap mr-10">
             {" "}
-            Mediprivacy "Bharosa Rag Rag Mein" Offering comprehensive healthcare
+            Mediprivacy &quot;Bharosa Rag Rag Mein&quot; Offering comprehensive healthcare
             solutions through smart clinics, smart pharmacies, and smart
             diagnostics, Mediprivacy is dedicated to bringing quality healthcare
             to every corner of the nation. With a vision to connect every pin
@@ -315,7 +315,7 @@ export default function Home() {
             {" "}
             <HeartPulse color="#F6971E" size={35} />
             <p className="text-center text-sm">
-              Committed to Nation's Health we deliver accessible, high quality
+              Committed to Nation&apos;s Health we deliver accessible, high quality
               healthcare through i nnovative, technology-driven solutions.
             </p>
           </div>

@@ -13,6 +13,7 @@ import {
   Facebook,
 } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 import hero from "../../public/assets/image 22.svg";
 import line1 from "../../public/assets/output-onlinepngtools (1) 2.svg";
 import line2 from "../../public/assets/output-onlinepngtools 2.svg";
@@ -32,6 +33,7 @@ import futureGoalsGroup from "../../public/assets/futureGoals/Group 137.svg";
 import Goal1 from "../../public/assets/futureGoals/Goal1.svg";
 import Goal2 from "../../public/assets/futureGoals/Goal2.svg";
 import Goal3 from "../../public/assets/futureGoals/Goal3.svg";
+import Image from "next/image";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,10 +81,10 @@ export default function Home() {
       <nav className="bg-white w-full z-20 top-0 start-0 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-0 py-4 w-full">
           {/* logo */}
-          <a href="/" className="flex items-center pl-4">
-            <img src={logo1.src} className="h-20" alt="Mediprivacy Logo" />
-            <img src={logo2.src} className="h-6" alt="Mediprivacy Logo" />
-          </a>
+          <Link href="/" className="flex items-center pl-4">
+            <Image src={logo1.src} alt="MediPrivacy Logo" width={80} height={20} className="h-20" />
+            <Image src={logo2.src} alt="MediPrivacy Logo" width={24} height={6} className="h-6" />
+          </Link>
 
           {/* Navigation Links - Center */}
           <div className="hidden md:flex flex-1 justify-center">
@@ -234,7 +236,7 @@ export default function Home() {
               <h1 className="text-[45px] font-bold text-[#1CB5BD] leading-tight mb-6 mt-10">
                 Your One-Stop Healthcare Solution
               </h1>
-              <img src={line1.src} className="w-full mt-[-20px] mb-[10px]" />
+              <Image src={line1.src} alt="Line Decoration" width={400} height={200} className="w-full mt-[-20px] mb-[10px]" />
               <p className="text-[16px] text-[#787878] leading-relaxed mb-8">
                 MediPrivacy is a comprehensive healthcare service provider,
                 offering everything from basic first aid to advanced surgeries.
@@ -258,9 +260,11 @@ export default function Home() {
           {/* Middle Section - Hero SVG */}
           <div className="w-[44%] flex items-center justify-center">
             <div className="w-full flex items-center justify-center">
-              <img
+              <Image
                 src={hero.src}
                 alt="Healthcare Hero"
+                width={800}
+                height={600}
                 className="w-full h-full object-contain"
               />
             </div>
@@ -270,9 +274,11 @@ export default function Home() {
           <article className="w-[28%] max-md:w-full">
             <div className="flex flex-col items-end h-full justify-between ml-[-200px] bg-[transparent] ">
               <div className="w-full max-w-[800px] mt-[170px] bg-[transparent]">
-                <img
+                <Image
                   src={line2.src}
                   alt="Line Decoration"
+                  width={800}
+                  height={400}
                   className="w-full h-full object-cover bg-transparent"
                 />
               </div>
@@ -347,19 +353,19 @@ export default function Home() {
         {/* Cards */}
         <div className="flex flex-row space-between gap-20 my-[70px] text-black">
           <div className="h-[200px] w-[270px] bg-[#F6971E33] flex flex-col justify-center items-center">
-            <img src={obj1.src} className="h-[100px] w-[100px]" alt="" />
+            <Image src={obj1.src} alt="Customer Support Icon" width={100} height={100} className="h-[100px] w-[100px]" />
             <p className="font-semibold">Customer Support</p>
           </div>
           <div className="h-[200px] w-[270px] bg-[#1CB5BD33] flex flex-col justify-center items-center">
-            <img src={obj2.src} className="h-[100px] w-[100px]" alt="" />
+            <Image src={obj2.src} alt="Chamber Services Icon" width={100} height={100} className="h-[100px] w-[100px]" />
             <p className="font-semibold">Chamber Services</p>
           </div>
           <div className="h-[200px] w-[270px] bg-[#F6971E33] flex flex-col justify-center items-center">
-            <img src={obj3.src} className="h-[100px] w-[100px]" alt="" />
+            <Image src={obj3.src} alt="Online Specialist Icon" width={100} height={100} className="h-[100px] w-[100px]" />
             <p className="font-semibold">Online Specialist</p>
           </div>
           <div className="h-[200px] w-[270px] bg-[#1CB5BD33] flex flex-col justify-center items-center">
-            <img src={obj4.src} className="h-[100px] w-[100px]" alt="" />
+            <Image src={obj4.src} alt="Privacy and Security Icon" width={100} height={100} className="h-[100px] w-[100px]" />
             <p className="font-semibold">Privacy and Security</p>
           </div>
         </div>
@@ -380,9 +386,11 @@ export default function Home() {
           <div className="flex flex-row space-between gap-8">
             <div className="bg-transparent w-[300px] h-[300px] rounded-sm border-2 border-[#E9F7F880] flex flex-col p-6">
               <div className="flex flex-row justify-start items-center gap-4">
-                <img
+                <Image
                   src={ser1.src}
-                  alt="Neurology"
+                  alt="Neurology Service Icon"
+                  width={70}
+                  height={70}
                   className="h-[70px] w-[70px]"
                 />
                 <p className="font-semibold text-lg">Neurology</p>
@@ -394,9 +402,11 @@ export default function Home() {
             </div>
             <div className="bg-transparent w-[300px] h-[300px] rounded-sm border-2 border-[#E9F7F880] flex flex-col p-6">
               <div className="flex flex-row justify-start items-center gap-4">
-                <img
+                <Image
                   src={ser2.src}
-                  alt="Cardiology"
+                  alt="Cardiology Service Icon"
+                  width={70}
+                  height={70}
                   className="h-[70px] w-[70px]"
                 />
                 <p className="font-semibold text-lg">Cardiology</p>
@@ -408,9 +418,11 @@ export default function Home() {
             </div>
             <div className="bg-transparent w-[300px] h-[300px] rounded-sm border-2 border-[#E9F7F880] flex flex-col p-6">
               <div className="flex flex-row justify-start items-center gap-4">
-                <img
+                <Image
                   src={ser3.src}
-                  alt="Surgery"
+                  alt="Surgery Service Icon"
+                  width={70}
+                  height={70}
                   className="h-[70px] w-[70px]"
                 />
                 <p className="font-semibold text-lg">Surgery</p>
@@ -422,9 +434,11 @@ export default function Home() {
             </div>
             <div className="bg-transparent w-[300px] h-[300px] rounded-sm border-2 border-[#E9F7F880] flex flex-col p-6">
               <div className="flex flex-row justify-start items-center gap-4">
-                <img
+                <Image
                   src={ser4.src}
-                  alt="Gastroenterlogy"
+                  alt="Gastroenterology Service Icon"
+                  width={70}
+                  height={70}
                   className="h-[70px] w-[70px]"
                 />
                 <p className="font-semibold text-lg">Gastroenterlogy</p>
@@ -438,9 +452,11 @@ export default function Home() {
           <div className="flex flex-row space-between gap-8">
             <div className="bg-transparent w-[300px] h-[300px] rounded-sm border-2 border-[#E9F7F880] flex flex-col p-6">
               <div className="flex flex-row justify-start items-center gap-4">
-                <img
+                <Image
                   src={ser5.src}
-                  alt="Dentist"
+                  alt="Dentist Service Icon"
+                  width={70}
+                  height={70}
                   className="h-[70px] w-[70px]"
                 />
                 <p className="font-semibold text-lg">Dentist</p>
@@ -452,9 +468,11 @@ export default function Home() {
             </div>
             <div className="bg-transparent w-[300px] h-[300px] rounded-sm border-2 border-[#E9F7F880] flex flex-col p-6">
               <div className="flex flex-row justify-start items-center gap-4">
-                <img
+                <Image
                   src={ser6.src}
-                  alt="Opthalmology"
+                  alt="Ophthalmology Service Icon"
+                  width={70}
+                  height={70}
                   className="h-[70px] w-[70px]"
                 />
                 <p className="font-semibold text-lg">Opthalmology</p>
@@ -466,9 +484,11 @@ export default function Home() {
             </div>
             <div className="bg-transparent w-[300px] h-[300px] rounded-sm border-2 border-[#E9F7F880] flex flex-col p-6">
               <div className="flex flex-row justify-start items-center gap-4">
-                <img
+                <Image
                   src={ser7.src}
-                  alt="Pediatry"
+                  alt="Pediatry Service Icon"
+                  width={70}
+                  height={70}
                   className="h-[70px] w-[70px]"
                 />
                 <p className="font-semibold text-lg">Pediatry</p>
@@ -480,9 +500,11 @@ export default function Home() {
             </div>
             <div className="bg-transparent w-[300px] h-[300px] rounded-sm border-2 border-[#E9F7F880] flex flex-col p-6">
               <div className="flex flex-row justify-start items-center gap-4">
-                <img
+                <Image
                   src={ser8.src}
-                  alt="Orthopaedics"
+                  alt="Orthopaedics Service Icon"
+                  width={70}
+                  height={70}
                   className="h-[70px] w-[70px]"
                 />
                 <p className="font-semibold text-lg">Orthopaedics</p>
@@ -503,9 +525,11 @@ export default function Home() {
       >
         <div className="w-[50%] flex items-center justify-start mt-[-80px]">
           <div className="h-[600px] w-auto">
-            <img
+            <Image
               src={futureGoalsGroup.src}
               alt="Future Goals Illustration"
+              width={800}
+              height={600}
               className="h-full w-auto object-contain"
             />
           </div>
@@ -513,7 +537,7 @@ export default function Home() {
         <div className="w-[50%] flex flex-col space-between p-12 gap-20">
           <p className="text-black text-4xl">Future Goals</p>
           <div className="flex flex-row justify-start gap-7 items-center">
-            <img src={Goal1.src} className="h-[100px] w-[100px]" alt="" />
+            <Image src={Goal1.src} alt="Modern Clinics Icon" width={100} height={100} className="h-[100px] w-[100px]" />
             <div className="flex flex-col">
               <p className="text-black text-lg font-semibold">Modern Clinics</p>
               <p className="text-base text-black">
@@ -523,7 +547,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-row justify-start gap-7 items-center">
-            <img src={Goal2.src} className="h-[100px] w-[100px]" alt="" />
+            <Image src={Goal2.src} alt="Less Consultation Fees Icon" width={100} height={100} className="h-[100px] w-[100px]" />
             <div className="flex flex-col">
               <p className="text-black text-lg font-semibold">
                 Less Consultaion Fees
@@ -535,7 +559,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-row justify-start gap-7 items-center">
-            <img src={Goal3.src} className="h-[100px] w-[100px]" alt="" />
+            <Image src={Goal3.src} alt="Professional Treatment Icon" width={100} height={100} className="h-[100px] w-[100px]" />
             <div className="flex flex-col">
               <p className="text-black text-lg font-semibold">
                 Professional Treatment
@@ -586,8 +610,8 @@ export default function Home() {
         {/* left side */}
         <div className="flex flex-col justify-start">
           <div className="flex flex-row justify-start items-center gap-1">
-            <img src={logo1.src} alt="MediPrivacy" className="h-30" />{" "}
-            <img src={logo2.src} alt="MediPrivacy" className="h-10" />
+            <Image src={logo1.src} alt="MediPrivacy Logo" width={120} height={30} className="h-30" />
+            <Image src={logo2.src} alt="MediPrivacy Logo" width={40} height={10} className="h-10" />
           </div>
           <div>
             <p className="text-[#1CB5BD] text-4xl">
@@ -604,7 +628,7 @@ export default function Home() {
               <PhoneCall /> +91-8000600355
             </p>
             <p className="flex items-center gap-2">
-              <MapPin /> 24 V'LANTE Sector 83 Near Hyatt Regency, Gurugram -
+              <MapPin /> 24 V&apos;LANTE Sector 83 Near Hyatt Regency, Gurugram -
               122012 ,Haryana, India
             </p>
           </div>

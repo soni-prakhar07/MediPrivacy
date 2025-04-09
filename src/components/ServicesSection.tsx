@@ -148,7 +148,7 @@ const services: Service[] = [
       "Heart Health Package (ECG, 2D Echo, Lipid Profile, Blood Pressure Monitoring)",
       "Diabetic Care Package (HbA1c, Fasting Blood Sugar, Kidney Function Tests)",
       "Senior Citizen Health Package (Complete Body Check-up with Bone & Joint Health Screening)",
-      "Women's Wellness Package (Hormonal Profile, Breast & Cervical Cancer Screening)",
+      "Women&apos;s Wellness Package (Hormonal Profile, Breast & Cervical Cancer Screening)",
     ],
     icon: (
       <svg
@@ -246,13 +246,11 @@ const services: Service[] = [
 export default function ServicesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [direction, setDirection] = useState<"left" | "right">("right");
 
   // Auto-scroll functionality
   useEffect(() => {
     const timer = setInterval(() => {
       if (!isAnimating) {
-        setDirection("right");
         setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
       }
     }, 5000);
@@ -263,7 +261,6 @@ export default function ServicesSection() {
   const nextSlide = () => {
     if (!isAnimating) {
       setIsAnimating(true);
-      setDirection("right");
       setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
       setTimeout(() => setIsAnimating(false), 300);
     }
@@ -272,7 +269,6 @@ export default function ServicesSection() {
   const prevSlide = () => {
     if (!isAnimating) {
       setIsAnimating(true);
-      setDirection("left");
       setCurrentIndex(
         (prevIndex) => (prevIndex - 1 + services.length) % services.length
       );
@@ -364,7 +360,6 @@ export default function ServicesSection() {
             onClick={() => {
               if (!isAnimating) {
                 setIsAnimating(true);
-                setDirection(index > currentIndex ? "right" : "left");
                 setCurrentIndex(index);
                 setTimeout(() => setIsAnimating(false), 300);
               }

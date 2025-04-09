@@ -16,7 +16,7 @@ export default function NavLink({ href, onClick, children, sectionId }: NavLinkP
     // Create a new Intersection Observer
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach(() => {
           // Get the current section element
           const currentSection = document.getElementById(sectionId);
           if (!currentSection) return;

@@ -14,11 +14,9 @@ import FindStoreSection from "@/components/FindStoreSection";
 import ServicesSection from "../components/ServicesSection";
 import ContactusSection from "@/components/ContactusSection";
 import NavLink from "@/components/NavLink";
-import { BlockList } from "net";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
 
   // Set up intersection observer for section animations
   useEffect(() => {
@@ -33,9 +31,6 @@ export default function Home() {
 
             // Update active section for navigation
             const sectionId = entry.target.id;
-            if (sectionId) {
-              setActiveSection(sectionId);
-            }
           }
         });
       },
@@ -282,7 +277,7 @@ export default function Home() {
                 className="w-full mt-[-20px] mb-[10px]"
               />
               <p className="text-[14px] md:text-[16px] text-[#787878] leading-relaxed mb-8">
-                Mediprivacy is India's emerging tech-enabled healthcare
+                Mediprivacy is India&apos;s emerging tech-enabled healthcare
                 platform, committed to providing convenient, accessible, and
                 high-quality healthcare services. As a one-stop healthcare
                 partner, we integrate smart clinics, pharmacies, diagnostics,

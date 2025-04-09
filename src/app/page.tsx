@@ -28,9 +28,6 @@ export default function Home() {
           if (entry.isIntersecting) {
             // Add animation class when section comes into view
             entry.target.classList.add("animate-section");
-
-            // Update active section for navigation
-            const sectionId = entry.target.id;
           }
         });
       },
